@@ -1,5 +1,7 @@
+// const { default: Header } = require('~/layouts/components/Header');
+
 function Home() {
-	return <h2>Home p</h2>;
+	return <></>;
 }
 
 export default Home;

@@ -1,39 +1,27 @@
-import { Fragment } from 'react';
+import { Fragment, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
 import { DefaultLayout } from '~/layouts';
 
+import Home from './pages/Home';
+import Work from './pages/Work';
+import Contact from './pages/Contact';
+import Sidebar from './layouts/components/Sidebar';
+import ContactForm from './layouts/components/ContactForm';
+import Header from './layouts/components/Header';
+
 function App() {
 	return (
-		<Router>
+		<div>
 			<div className="App">
-				<Routes>
-					{publicRoutes.map((route, index) => {
-						const Page = route.component;
-
-						let Layout = DefaultLayout;
-
-						if (route.layout) {
-							Layout = route.layout;
-						} else if (route.layout === null) {
-							Layout = Fragment;
-						}
-
-						return (
-							<Route
-								key={index}
-								path={route.path}
-								element={
-									<Layout>
-										<Page />
-									</Layout>
-								}
-							/>
-						);
-					})}
-				</Routes>
+				<DefaultLayout />
+				{/* <Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/work" element={<Work />} />
+					<Route path="/contact" element={<Contact />} />
+				</Routes> */}
 			</div>
-		</Router>
+		</div>
 	);
 }
 

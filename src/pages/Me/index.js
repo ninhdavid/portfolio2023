@@ -1,10 +1,11 @@
-import Test from '~/layouts/components/Container';
+import Information from '~/layouts/components/Information/Information';
 
 function Me() {
 	return (
 		<>
-			<Test />
-			<h2>Me</h2>
+			<div id="/me">
+				<Information />
+			</div>
 		</>
 	);
 }

@@ -9,12 +9,12 @@ function ParticlesRender() {
 	const init = useCallback(async (engine) => {
 		await loadFull(engine);
 	}, []);
-
+	// const particlesLoaded = useCallback(async (container) => {
+	// 	await  console.log(container);
+	// }, []);
 	const options = {
 		detectRetina: true,
-		detectsOn: 'canvas',
 		interactivity: {
-			detectsOn: 'parent',
 			event: {
 				onHover: {
 					enable: true,
@@ -27,47 +27,76 @@ function ParticlesRender() {
 		},
 
 		particles: {
-			bounce: {
-				horizontal: {
-					random: {
-						enable: true,
-						minimumValue: 0.1,
-					},
-					value: 0.1,
-				},
-				vertical: {
-					random: {
-						enable: true,
-						minimumValue: 0.1,
-					},
-					value: 0.1,
-				},
-			},
 			number: { value: 120 },
 			color: {
 				value: ['#03dac6', '#ff0266', '#000000'],
 			},
-
+			spawning: true,
 			move: {
 				enable: true,
 				speed: 2,
 				random: true,
-				outMode: 'ease-out-quad',
 			},
 			links: {
-				color: { value: 'random' },
-				distance: 150,
+				color: 'random',
+				distance: 140,
 				enable: true,
 				width: 1,
 			},
 			size: {
-				value: 2,
-				random: true,
+				value: { min: 0.5, max: 2.5 },
 			},
 		},
+		responsive: [
+			{
+				maxWidth: 1023,
+				options: {
+					particles: {
+						number: { value: 90 },
+						links: {
+							enable: true,
+							distance: 80,
+							width: 0.7,
+						},
+					},
+				},
+			},
+			{
+				maxWidth: 767,
+				options: {
+					particles: {
+						number: { value: 70 },
+						links: { enable: false },
+						move: {
+							enable: true,
+							speed: 1.75,
+							random: true,
+						},
+					},
+				},
+			},
+			{
+				maxWidth: 374,
+				options: {
+					particles: {
+						number: { value: 20 },
+						links: { enable: false },
+						move: {
+							enable: true,
+							speed: 1,
+							random: true,
+						},
+					},
+				},
+			},
+		],
 	};
 
-	return <Particles options={options} init={init} className={cx('canvas')} />;
+	return (
+		<div id={cx('content-canvas')}>
+			<Particles options={options} init={init} id={cx('canvas')} />
+		</div>
+	);
 }
 
 export default ParticlesRender;

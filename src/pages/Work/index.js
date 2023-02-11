@@ -1,5 +1,13 @@
+import Product from '~/layouts/components/Product';
+
 function Work() {
-	return <h2>Work page</h2>;
+	return (
+		<>
+			<div id="/work">
+				<Product />
+			</div>
+		</>
+	);
 }
 
 export default Work;

@@ -10,10 +10,10 @@ import Contact from '~/pages/Contact';
 
 //Public routes
 const publicRoutes = [
-	{ path: config.routes.home, component: Home },
-	{ path: config.routes.work, component: Work },
-	{ path: config.routes.me, component: Me },
-	{ path: config.routes.contact, component: Contact },
+	{ path: config.routes.home, name: Home, component: Home },
+	{ path: config.routes.work, name: Work, component: Work },
+	{ path: config.routes.me, name: Me, component: Me },
+	{ path: config.routes.contact, name: Contact, component: Contact },
 ];
 
 const privateRoutes = [];

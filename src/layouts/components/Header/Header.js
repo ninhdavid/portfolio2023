@@ -16,8 +16,8 @@ function Header() {
 						<Description />
 					</h3>
 				</section>
+				<ParticlesRender />
 			</div>
-			<ParticlesRender />
 		</div>
 	);
 }

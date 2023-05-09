@@ -5,14 +5,14 @@ import config from '~/config';
 //pages
 import Home from '~/pages/Home';
 import Work from '~/pages/Work';
-import Me from '~/pages/Me';
+import About from '~/pages/About';
 import Contact from '~/pages/Contact';
 
 //Public routes
 const publicRoutes = [
 	{ path: config.routes.home, name: Home, component: Home },
 	{ path: config.routes.work, name: Work, component: Work },
-	{ path: config.routes.me, name: Me, component: Me },
+	{ path: config.routes.about, name: About, component: About },
 	{ path: config.routes.contact, name: Contact, component: Contact },
 ];
 

@@ -3,12 +3,10 @@ import styles from './Grid.module.scss';
 
 const cx = classNames.bind(styles);
 function Grid({ children }) {
-	const content = cx('content');
-
 	return (
 		<>
 			<div className={cx('container')}>
-				<div className={content}>{children}</div>
+				<div className={cx('content')}>{children}</div>
 			</div>
 		</>
 	);

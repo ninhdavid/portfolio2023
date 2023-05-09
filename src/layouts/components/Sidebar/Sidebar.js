@@ -98,7 +98,11 @@ function Sidebar() {
 								to={config.routes.home}
 							/>
 
-							<MenuItem activeClass="active" title="Me" to={config.routes.me} />
+							<MenuItem
+								activeClass="active"
+								title="About"
+								to={config.routes.about}
+							/>
 							<MenuItem
 								activeClass="active"
 								title="Work"

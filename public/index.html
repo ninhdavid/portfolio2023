@@ -49,11 +49,51 @@
 	
 	<link rel="preconnect" href="http://doommad.byethost16.com">
 
+	
+
 		<title>Portfolio</title>
+
+		<style media="screen" type="text/css"> 
+			.loader-container {
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #ddd;
+			}
+
+			.loader-bar {
+				display: block;
+				/* animation: spin 0.5s linear infinite; */
+				margin:auto;
+				color: #fff;
+			}
+			@keyframes spin {
+				0%{
+					transform: rotate(0deg);
+					opacity: 0;
+				}
+				100%{
+					transform: rotate(360deg);
+					opacity: 1;
+				}
+			}
+
+
+
+		</style>
+
 	</head>
 	
 		<noscript>You need to enable JavaScript to run this app.</noscript>
-		<div id="root"></div>
+		<div id="root">
+			<div id="loader" class="loader-container">
+				<div class="loader-bar">
+				<img src="./loader.svg" alt="">
+				</div>
+			</div>	
+		</div>
 		<!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

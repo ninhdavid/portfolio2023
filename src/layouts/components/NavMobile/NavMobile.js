@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 function NavMobile() {
 	return (
 		<>
-			<Button>
+			<div>
 				<Link
 					to="/"
 					spy={true}
@@ -23,11 +23,11 @@ function NavMobile() {
 				>
 					<HiOutlineHome className={cx('m-btn')} />
 				</Link>
-			</Button>
+			</div>
 
-			<Button>
+			<div>
 				<Link
-					to="/me"
+					to="/about"
 					spy={true}
 					smooth={true}
 					duration={800}
@@ -35,8 +35,8 @@ function NavMobile() {
 				>
 					<BsPerson className={cx('m-btn')} />
 				</Link>
-			</Button>
-			<Button>
+			</div>
+			<div>
 				<Link
 					to="/work"
 					spy={true}
@@ -46,8 +46,8 @@ function NavMobile() {
 				>
 					<MdWorkOutline className={cx('m-btn')} />
 				</Link>
-			</Button>
-			<Button>
+			</div>
+			<div>
 				<Link
 					to="/contact"
 					spy={true}
@@ -57,7 +57,7 @@ function NavMobile() {
 				>
 					<BiMailSend className={cx('m-btn')} />
 				</Link>
-			</Button>
+			</div>
 		</>
 	);
 }

@@ -1,18 +1,27 @@
-import React, { Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from '~/components/GlobalStyles';
 import { BrowserRouter } from 'react-router-dom';
+
+import Loader from './components/Loader';
+
+const App = lazy(() => {
+	return Promise.all([
+		import('./App'),
+		new Promise((resolve) => setTimeout(resolve, 2000)),
+	]).then(([App]) => App);
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<BrowserRouter basename="/">
 			<GlobalStyles>
-				{/* <Suspense fallback={<h1>Loading...</h1>}> */}
-				<App />
-				{/* </Suspense> */}
+				<Suspense fallback={<Loader />}>
+					<App />
+				</Suspense>
 			</GlobalStyles>
 		</BrowserRouter>
 	</React.StrictMode>

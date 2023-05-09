@@ -9,7 +9,7 @@ function Modal() {
 	const { handleCloseModal, getLink } = useContext(ModalContext);
 
 	const handleOpenLink = (e) => {
-		window.open(getLink, '_blank');
+		window.open(getLink);
 	};
 
 	return (

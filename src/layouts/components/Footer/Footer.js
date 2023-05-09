@@ -7,7 +7,7 @@ import styles from './Footer.module.scss';
 const cx = classNames.bind(styles);
 
 function Footer() {
-	const { width } = useWindowSize;
+	const { width } = useWindowSize();
 	return (
 		<>
 			{width <= 767 ? (

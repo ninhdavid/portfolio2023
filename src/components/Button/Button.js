@@ -11,9 +11,12 @@ function Button({
 	outline = false,
 	disabled = false,
 	text = false,
+	textOutline = false,
 	rounded = false,
 	small = false,
 	large = false,
+	border = false,
+	wrapper = false,
 	leftIcon,
 	rightIcon,
 	className,
@@ -39,11 +42,14 @@ function Button({
 		Comp = 'a';
 	}
 
-	const classes = cx('wrapper', {
+	const classes = cx({
+		wrapper,
 		primary,
 		outline,
 		disabled,
 		text,
+		textOutline,
+		border,
 		rounded,
 		small,
 		large,

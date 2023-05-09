@@ -23,27 +23,37 @@ function Product() {
 	const product = [
 		{
 			src: `${images.product1}`,
+			preview: `${images.preview1}`,
 			href: 'http://doommad.byethost16.com/',
-			link: 'doommad.byethost16.com',
-			tag: 'Source code: ',
-			description: 'description',
-			source: 's',
+			source: '',
+			name: 'WordPress eCommerce',
+			tag: '',
+			intro:
+				'WordPress giúp tôi tạo và quản lý trang web động. Từ đó tôi có thể tùy chỉnh giao diện , sử dụng các plugin và sử dụng cơ sở dữ liệu và đưa trang web lên hosting.',
+			description:
+				'WordPress giúp tôi tạo và quản lý trang web động. Từ đó tôi có thể tùy chỉnh giao diện , sử dụng các plugin và sử dụng cơ sở dữ liệu và đưa trang web lên hosting.',
 		},
 		{
-			src: `${images.product1}`,
-			href: 'http://doommad.byethost16.com/',
-			link: 'doommad.byethost16.com',
-			tag: 'Source code: ',
-			description: 'description',
-			source: 's',
+			src: `${images.product2}`,
+			preview: `${images.preview2}`,
+			href: 'http://ninhdavid.github.io/tiktok-ui/',
+			source: 'https://github.com/ninhdavid/tiktok-ui',
+			name: 'Tiktok-ui',
+			tag: '',
+			intro:
+				'Trong dự án, tôi đã sử dụng ReactJS, Sass và CSS Module để phát triển trang web động với tính tương tác cao và quản lý dễ dàng hơn. Tôi cũng tích hợp API để tải dữ liệu vào trang web.',
+			description:
+				'Trong dự án, tôi đã sử dụng ReactJS, Sass và CSS Module để phát triển trang web động với tính tương tác cao và quản lý dễ dàng hơn. Tôi cũng tích hợp API để tải dữ liệu vào trang web.',
 		},
 		{
 			src: '../src/assets/images/userAvatar.jpg',
-			href: 'http://doommad.byethost16.com/',
-			link: 'doommad.byethost16.com',
-			tag: 'Source code: ',
-			description: 'description',
-			source: 's',
+			preview: `${images.preview3}`,
+			href: '',
+			source: '',
+			name: 'In progress...',
+			tag: '',
+			intro: '',
+			description: '',
 		},
 	];
 
@@ -70,11 +80,18 @@ function Product() {
 							</ProductMenu>
 						</Swiper>
 					) : (
-						<ProductMenu>
+						// <ProductMenu>
+						// 	{product.map((result, index) => (
+						// 		<ProductItem key={index} props={result} />
+						// 	))}
+						// </ProductMenu>
+						<>
 							{product.map((result, index) => (
-								<ProductItem key={index} props={result} />
+								<ProductMenu key={index}>
+									<ProductItem props={result} />
+								</ProductMenu>
 							))}
-						</ProductMenu>
+						</>
 					)}
 				</Grid>
 			</div>

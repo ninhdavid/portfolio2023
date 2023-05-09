@@ -1,7 +1,7 @@
 const routes = {
 	home: '/',
 	work: '/work',
-	me: '/me',
+	about: '/about',
 	contact: '/contact',
 };
 

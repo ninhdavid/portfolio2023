@@ -1,4 +1,4 @@
-import { Fragment, Suspense } from 'react';
+import { Fragment, Suspense, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
 import { DefaultLayout } from '~/layouts';
@@ -24,5 +24,6 @@ function App() {
 		</div>
 	);
 }
+// debugger;
 
 export default App;

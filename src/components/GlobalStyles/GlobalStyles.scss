@@ -146,6 +146,13 @@ html *::-webkit-scrollbar-track {
 	border-radius: 0;
 	background-color: rgba(0, 0, 0, 0);
 }
+//side navbar
+
+.active {
+	color: var(--bg-color);
+	background-color: var(--bg-hover);
+	transition: all 0.5s linear;
+}
 
 .scroll-top {
 	position: fixed;
@@ -178,8 +185,7 @@ html *::-webkit-scrollbar-track {
 @media screen and (max-width: 1024px) {
 	.title-container {
 		font-size: 12vw;
-		margin-bottom: 0;
-		margin-top: 0rem;
+		margin-top: 2rem;
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {

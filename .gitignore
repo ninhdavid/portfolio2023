@@ -26,5 +26,6 @@ yarn-error.log*
 /.history
 .hintrc
 
-
+vscode
 .vscode
+.vscode/clear

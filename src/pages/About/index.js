@@ -1,13 +1,13 @@
 import Information from '~/layouts/components/Information/Information';
 
-function Me() {
+function About() {
 	return (
 		<>
-			<div id="/me">
+			<div id="/about">
 				<Information />
 			</div>
 		</>
 	);
 }
 
-export default Me;
+export default About;

@@ -14,13 +14,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useWindowSize } from '~/hooks';
 
 const cx = classNames.bind(styles);
+
 function PreviewModal() {
 	const { width } = useWindowSize();
-	const { handleCloseModal, getLink, getSrc, getSource, info } =
-		useContext(ModalContext);
+	const { handleCloseModal, getLink, getSrc, getSource, info } = useContext(ModalContext);
 	const [isDescView, setIsDescView] = useState(false);
 	const [isMoveInClass, setMoveInClass] = useState(false);
-
+	const [isIframe, setIsIframe] = useState(false);
 	// const handleOpenLink = (e) => {
 	// 	window.open(getLink);
 	// };
@@ -47,6 +47,13 @@ function PreviewModal() {
 			document.removeEventListener('keydown', handleEsc);
 		};
 	}, []);
+	useEffect(() => {
+		if (getSrc.includes('drive.google')) {
+			setIsIframe(true);
+		} else {
+			setIsIframe(false);
+		}
+	}, []);
 	return (
 		<>
 			{width >= 768 && (
@@ -55,13 +62,16 @@ function PreviewModal() {
 						<section className={cx('modal-section')}>
 							<div className={cx('modal-content')}>
 								<div className={cx('img-section')}>
-									{getSrc && (
-										<img
-											src={getSrc}
-											alt={getSrc}
-											className={cx('img-content')}
-										/>
-									)}
+									{getSrc &&
+										(isIframe ? (
+											<video title='google-iframe' src={getSrc} controls />
+										) : (
+											<img
+												src={getSrc}
+												alt={getSrc}
+												className={cx('img-content')}
+											/>
+										))}
 								</div>
 
 								{!isDescView && (
@@ -103,15 +113,16 @@ function PreviewModal() {
 												<div className={cx('btn-section')}>
 													<Button
 														href={info.href}
-														target="_blank"
+														target='_blank'
 														wrapper
 														className={cx('btn')}
+														disabled={!info.href}
 													>
 														Live Demo
 													</Button>
 													<Button
 														href={info.source}
-														target="_blank"
+														target='_blank'
 														wrapper
 														className={cx('btn')}
 														disabled={!info.source}

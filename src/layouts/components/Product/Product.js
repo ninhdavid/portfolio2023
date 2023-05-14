@@ -28,8 +28,7 @@ function Product() {
 			source: '',
 			name: 'WordPress eCommerce',
 			tag: '',
-			intro:
-				'WordPress giúp tôi tạo và quản lý trang web động. Từ đó tôi có thể tùy chỉnh giao diện , sử dụng các plugin và sử dụng cơ sở dữ liệu và đưa trang web lên hosting.',
+			intro: 'WordPress giúp tôi tạo và quản lý trang web động. Từ đó tôi có thể tùy chỉnh giao diện , sử dụng các plugin và sử dụng cơ sở dữ liệu và đưa trang web lên hosting.',
 			description:
 				'WordPress giúp tôi tạo và quản lý trang web động. Từ đó tôi có thể tùy chỉnh giao diện , sử dụng các plugin và sử dụng cơ sở dữ liệu và đưa trang web lên hosting.',
 		},
@@ -40,20 +39,21 @@ function Product() {
 			source: 'https://github.com/ninhdavid/tiktok-ui',
 			name: 'Tiktok-ui',
 			tag: '',
-			intro:
-				'Trong dự án, tôi đã sử dụng ReactJS, Sass và CSS Module để phát triển trang web động với tính tương tác cao và quản lý dễ dàng hơn. Tôi cũng tích hợp API để tải dữ liệu vào trang web.',
+			intro: 'Trong dự án, tôi đã sử dụng ReactJS, Sass và CSS Module để phát triển trang web động với tính tương tác cao và quản lý dễ dàng hơn. Tôi cũng tích hợp API để tải dữ liệu vào trang web.',
 			description:
 				'Trong dự án, tôi đã sử dụng ReactJS, Sass và CSS Module để phát triển trang web động với tính tương tác cao và quản lý dễ dàng hơn. Tôi cũng tích hợp API để tải dữ liệu vào trang web.',
 		},
 		{
-			src: '../src/assets/images/userAvatar.jpg',
-			preview: `${images.preview3}`,
+			src: `${images.product3}`,
+			preview: 'https://drive.google.com/uc?id=1dSGCtjJXJ2CRojsBeTSmnqvKnFpEPhgm',
+			preview2: `<iframe src="https://drive.google.com/file/d/1dSGCtjJXJ2CRojsBeTSmnqvKnFpEPhgm/preview" width="640" height="480" allow="autoplay"></iframe>`,
 			href: '',
 			source: '',
 			name: 'In progress...',
 			tag: '',
-			intro: '',
-			description: '',
+			intro: 'Tôi sử dụng NextJS để phát triển phía giao diện người dùng cùng với tính năng hỗ trợ SEO mạnh mẽ',
+			description:
+				'Trong dự án, tôi đã sử dụng NextJS, Typescript, Redux, TailwindCss và Styled-component, Framer motion để xây dựng website ở phía frontend. Còn backend đang được xây dựng sẽ sử dụng những công nghệ như: ExpressJS, NodeJS, Trapi cms để xây dựng và phát triển, cùng với đó sẽ sử dụng graphql để tương tác với CSDL dễ dàng hơn. ',
 		},
 	];
 

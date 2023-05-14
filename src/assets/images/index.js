@@ -6,6 +6,7 @@ const images = {
 	searchUser: require('~/assets/images/search-user.jpeg'),
 	product1: require('~/assets/images/product-img/bg-byethost-site.jpg'),
 	product2: require('~/assets/images/product-img/tiktok-min.jpeg'),
+	product3: require('~/assets/images/product-img/shoe-store.webp'),
 	preview1: require('~/assets/images/product-img/bg-byehost-site-preview.jpeg'),
 	preview2: require('~/assets/images/product-img/tiktok-preview.jpeg'),
 };
